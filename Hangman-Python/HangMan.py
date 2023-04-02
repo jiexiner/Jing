@@ -1,14 +1,8 @@
-# assignment: programming assignment 1
-# author: Jiaxi(Emily) Ou
-# date: 4/11/2022
-# file: hangman.py is a program that generate a legitimate dictionary word and ask the user to guess the word one letter at a time. 
-# input: User's choice input
-# output: Game text display
 
 from random import choice, random
 
 
-#Import dictionary function
+
 def import_dictionary (filename) :
     dictionary = {}
     max_size = 12
@@ -27,11 +21,11 @@ def import_dictionary (filename) :
                     dictionary[length].append(word)
     return dictionary
 
-#Print Dictionary function
+
 def print_dictionary (dictionary) :
     print(dictionary)
 
-#Game option (size) Function
+
 def get_game_options_size(size):
     
     try:
@@ -43,7 +37,7 @@ def get_game_options_size(size):
         print('A dictionary word of any size will be chosen.')
     return (size,words)
 
-#Game option (lives) Function
+
 def get_game_options_lives(lives):
     
     try:
@@ -59,7 +53,6 @@ def get_game_options_lives(lives):
 
 
 
-#Main code
 if __name__ == '__main__' :
     dictionary_file= "dictionary-short.txt"
     dictionary = import_dictionary(dictionary_file)
